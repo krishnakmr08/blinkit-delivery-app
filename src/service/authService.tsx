@@ -11,8 +11,6 @@ export const customerLogin = async (phone: string) => {
   try {
     const response = await axios.post(`${BASE_URL}/customer/login`, { phone });
     const { accessToken, refreshToken, customer } = response.data;
-    console.log(response.data);
-    console.log(accessToken, refreshToken, customer);
     tokenStorage.set('accessToken', accessToken);
     tokenStorage.set('refreshToken', refreshToken);
     const { setUser } = useAuthStore.getState();

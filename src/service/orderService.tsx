@@ -1,4 +1,3 @@
-
 import { appAxios } from './apiInterceptors';
 import { BRANCH_ID } from './config';
 
@@ -19,7 +18,7 @@ export const createOrder = async (items: any, totalPrice: number) => {
 export const getOrderById = async (id: string) => {
   try {
     const response = await appAxios.get(`/order/${id}`);
-    console.log(response,"from get orderbyid23")
+    console.log(response, 'from get orderbyid23');
     return response.data;
   } catch (error) {
     console.log('Fetch Order Error', error);
@@ -45,7 +44,7 @@ export const fetchOrders = async (
   let uri =
     status == 'available'
       ? `/order?status=${status}&branchId=${branchId}`
-      : `/order/?branchId=${branchId}&deliveryPartnerId=${userId}&status=delivered`;
+      : `/order?branchId=${branchId}&deliveryPartnerId=${userId}&status=delivered`;
 
   try {
     const response = await appAxios.get(uri);

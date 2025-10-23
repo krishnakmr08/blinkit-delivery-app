@@ -66,9 +66,6 @@ const SplashScreen: FC = () => {
     const initialStartup = async () => {
       try {
         GeoLocation.requestAuthorization();
-        console.log(tokenStorage.getString('accessToken'));
-        console.log(tokenStorage.getString('refreshToken'));
-        console.log(user?.role);
         tokenCheck();
       } catch (error) {
         Alert.alert(

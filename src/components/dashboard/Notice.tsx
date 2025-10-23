@@ -39,7 +39,7 @@ const Notice: FC = () => {
           <Path id="wavepath" d={wavyData} />
         </Defs>
         <G>
-          <Use href="#wavepath" y="333" />
+          <Use href="#wavepath" y="321" />
         </G>
       </Svg>
     </View>

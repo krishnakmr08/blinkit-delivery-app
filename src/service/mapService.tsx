@@ -18,9 +18,6 @@ export const reverseGeocode = async (
     if (response.data.status === GEOCODE_STATUS_OK) {
       if (response.data.results.length > 0) {
         const address = response.data.results[0].formatted_address;
-        console.log(address);
-        console.log(latitude);
-        console.log(longitude);
         updateUserLocation(
           { liveLocation: { latitude, longitude }, address },
           setUser,

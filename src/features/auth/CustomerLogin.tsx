@@ -29,7 +29,7 @@ import CustomInput from '@components/ui/CustomInput';
 import CustomButton from '@components/ui/CustomButton';
 import { customerLogin } from '@service/authService';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { useAuthStore } from '@state/authStore';
+
 
 const bottomColors = [...lightColors].reverse();
 
@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
   },
   absoluteSwitch: {
     position: 'absolute',
-    top: Platform.OS === 'ios' ? 50 : 40,
+    top: Platform.OS === 'ios' ? 50 : 20,
     backgroundColor: '#fff',
     shadowColor: '#000',
     shadowOffset: { width: 1, height: 1 },
